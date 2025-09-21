@@ -1,0 +1,26 @@
+{
+  "name": "viajes_apirest",
+  "version": "1.0.0",
+  "description": "Parcial 1 Aplicaciones Hibridas",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prisciladellic/parcial1_aplicaciones_hibridas.git"
+  },
+  "author": "Priscila Delli Carpini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prisciladellic/parcial1_aplicaciones_hibridas/issues"
+  },
+  "homepage": "https://github.com/prisciladellic/parcial1_aplicaciones_hibridas#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1"
+  }
+}

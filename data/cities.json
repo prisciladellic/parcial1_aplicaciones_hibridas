@@ -1,0 +1,34 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "city_name": "Buenos Aires",
+    "country": "Argentina",
+    "continent": "América del Sur",
+    "language": "Español",
+    "climate": "Templado húmedo"
+  },
+  {
+    "id": "6fa459ea-ee8a-3ca4-894e-db77e160355e",
+    "city_name": "Roma",
+    "country": "Italia",
+    "continent": "Europa",
+    "language": "Italiano",
+    "climate": "Mediterráneo"
+  },
+  {
+    "id": "1c6e27f0-2fbd-4c7b-8f24-123456789abc",
+    "city_name": "Tokio",
+    "country": "Japón",
+    "continent": "Asia",
+    "language": "Japonés",
+    "climate": "Subtropical húmedo"
+  },
+  {
+    "id": "9f9d51bc-70ef-42b3-981c-abcdef123456",
+    "city_name": "El Cairo",
+    "country": "Egipto",
+    "continent": "África",
+    "language": "Árabe",
+    "climate": "Desértico"
+  }
+]
