@@ -1,12 +1,12 @@
 import express from 'express';
-import { postCity, getCities, getCityById, deleteCityById, updateCityById } from '../controllers/cityController.js';
+import CityController from '../controllers/CityController.js';
 
 const router = express.Router();
 
-router.post('/', postCity);
-router.get('/', getCities);
-router.get('/:id', getCityById);
-router.delete('/:id', deleteCityById);
-router.put('/:id', updateCityById);
+router.post('/', CityController.postCity);
+router.get('/', CityController.getCities);
+router.get('/:id', CityController.getCityById);
+router.delete('/:id', CityController.deleteCityById);
+router.put('/:id', CityController.updateCityById);
 
 export default router;

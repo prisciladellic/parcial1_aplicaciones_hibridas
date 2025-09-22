@@ -25,9 +25,9 @@ const validateToken = (req, res, next) => {
 
         req.body.cityID = decoded.id;
         console.log({decoded});
-    })
 
-    next();
+        next();
+    })
 }
 
 export {validateToken};

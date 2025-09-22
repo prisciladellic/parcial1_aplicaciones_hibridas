@@ -14,15 +14,14 @@ header {
 
 main {
     background-color: #f0d2a0;
-    height: 60vh;
 }
 
-.subtitle {
+.card {
     background-color: #fdfbe4 !important;
     width: 550px;
 }
 
-.subtitle h2 {
+.card h2 {
     color:#44b9df;
     font-weight: bold;
 }

@@ -14,39 +14,83 @@
     <header class="d-flex justify-content-center flex-column align-items-center">
         <h1 class="title">Hola Carola! 🐌</h1>
         <p class="m-0">Bienvenid@s a mi API de ciudades y lugares turísticos</p>
+        <p class="text-muted">⚠️ Nota: Esta API solo soporta caracteres sin tildes ni ñ (por ejemplo, “america” en lugar de “américa”).</p>
+
     </header>
     <main>
         <div class="d-flex justify-content-center m-0 p-5">
-            <div class="card subtitle m-2">
+            <div class="card m-2">
                 <h2 class="mx-3 my-2 fs-4">Ciudades</h2>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> <a href="/api/cities">/api/cities</a> <span class="info">Obtener lista completa de ciudades</span></li>
-                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> /api/cities/{cityID} <span class="info">Obtener ciudad por ID</span></li>
                     <li class="list-group-item">
-                    <span class="badge text-bg-success">POST</span>
-                        /api/cities <span class="info">crear ciudad (enviar JSON)</span> 
+                        <span class="badge text-bg-info">GET</span> 
+                        <a href="/api/cities">/api/cities</a> 
+                        <span class="info">Obtener lista completa de ciudades</span></li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info">GET</span> 
+                        /api/cities/{cityID}
+                        <span class="info">Obtener ciudad por ID</span></li>
+                    <li class="list-group-item"> 
+                        <span class="badge text-bg-info">GET</span> 
+                        /api/cities?continent=america&country=argentina
+                        <span class="info">Filtrar ciudades por continente y/o país</span>
                     </li>
                     <li class="list-group-item">
-                    <span class="badge text-bg-warning">PUT</span>
-                    /api/cities/{cityID} <span class="info">actualizar ciudad (enviar JSON)</span> 
+                        <span class="badge text-bg-info">GET</span>
+                        /api/cities?name=buenos
+                        <span class="info">Buscar ciudades por nombre (coincidencia parcial)</span>
                     </li>
-                    <li class="list-group-item"><span class="badge text-bg-danger">DELETE</span> /api/cities/{cityID} <span class="info">Eliminar una ciudad</span></li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-success">POST</span>
+                        /api/cities 
+                        <span class="info">Crear una ciudad</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-warning">PUT</span>
+                        /api/cities/{cityID} 
+                        <span class="info">Actualizar una ciudad</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-danger">DELETE</span> 
+                        /api/cities/{cityID} 
+                        <span class="info">Eliminar una ciudad</span></li>
                 </ul>
-            </div>
-            <div class="card subtitle m-2">
+            </div>            
+            <div class="card m-2">
                 <h2 class="mx-3 my-2 fs-4">Lugares Turísticos</h2>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> <a href="/api/landmarks">/api/landmarks</a> <span class="info">Obtener lista completa de ciudades</span></li>
-                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> /api/landmarks/{landmarkID} <span class="info">Obtener ciudad por ID</span></li>
                     <li class="list-group-item">
-                    <span class="badge text-bg-success">POST</span>
-                        /api/landmarks <span class="info">crear ciudad (enviar JSON)</span> 
+                        <span class="badge text-bg-info">GET</span> 
+                        <a href="/api/landmarks">/api/landmarks</a> 
+                        <span class="info">Obtener lista completa de lugares</span></li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info">GET</span> 
+                        /api/landmarks/{landmarkID}
+                        <span class="info">Obtener lugar por ID</span></li>
+                    <li class="list-group-item"> 
+                        <span class="badge text-bg-info">GET</span> 
+                        /api/landmarks?city=bariloche&popularity=9
+                        <span class="info">Filtrar lugares por ciudad y/o nivel de popularidad (del 0 al 10)</span>
                     </li>
                     <li class="list-group-item">
-                    <span class="badge text-bg-warning">PUT</span>
-                    /api/landmarks/{landmarkID} <span class="info">actualizar ciudad (enviar JSON)</span> 
+                        <span class="badge text-bg-info">GET</span>
+                        /api/landmarks?name=cerro
+                        <span class="info">Buscar lugares por nombre (coincidencia parcial)</span>
                     </li>
-                    <li class="list-group-item"><span class="badge text-bg-danger">DELETE</span> /api/landmarks/{landmarkID} <span class="info">Eliminar una ciudad</span></li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-success">POST</span>
+                        /api/landmarks 
+                        <span class="info">Crear un lugar</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-warning">PUT</span>
+                        /api/landmarks/{cityID} 
+                        <span class="info">Actualizar un lugar</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-danger">DELETE</span> 
+                        /api/landmarks/{landmarkID} 
+                        <span class="info">Eliminar un lugar</span></li>
                 </ul>
             </div>
         </div>
