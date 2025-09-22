@@ -4,23 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajes - API</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Hola Carola! 🐌</h1>
-        <p>Bienvenid@s a mi API de ciudades y lugares turísticos</p>
+    <header class="d-flex justify-content-center flex-column align-items-center">
+        <h1 class="title">Hola Carola! 🐌</h1>
+        <p class="m-0">Bienvenid@s a mi API de ciudades y lugares turísticos</p>
     </header>
     <main>
-        <ul>
-            <li><a href="/api/cities">Ciudades</a></li>
-        </ul>
-        <ul>
-            <li><a href="/api/landmarks">Lugares Turísticos</a></li>
-        </ul>
+        <div class="d-flex justify-content-center m-0 p-5">
+            <div class="card subtitle m-2">
+                <h2 class="mx-3 my-2 fs-4">Ciudades</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> <a href="/api/cities">/api/cities</a> <span class="info">Obtener lista completa de ciudades</span></li>
+                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> /api/cities/{cityID} <span class="info">Obtener ciudad por ID</span></li>
+                    <li class="list-group-item">
+                    <span class="badge text-bg-success">POST</span>
+                        /api/cities <span class="info">crear ciudad (enviar JSON)</span> 
+                    </li>
+                    <li class="list-group-item">
+                    <span class="badge text-bg-warning">PUT</span>
+                    /api/cities/{cityID} <span class="info">actualizar ciudad (enviar JSON)</span> 
+                    </li>
+                    <li class="list-group-item"><span class="badge text-bg-danger">DELETE</span> /api/cities/{cityID} <span class="info">Eliminar una ciudad</span></li>
+                </ul>
+            </div>
+            <div class="card subtitle m-2">
+                <h2 class="mx-3 my-2 fs-4">Lugares Turísticos</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> <a href="/api/landmarks">/api/landmarks</a> <span class="info">Obtener lista completa de ciudades</span></li>
+                    <li class="list-group-item"><span class="badge text-bg-info">GET</span> /api/landmarks/{landmarkID} <span class="info">Obtener ciudad por ID</span></li>
+                    <li class="list-group-item">
+                    <span class="badge text-bg-success">POST</span>
+                        /api/landmarks <span class="info">crear ciudad (enviar JSON)</span> 
+                    </li>
+                    <li class="list-group-item">
+                    <span class="badge text-bg-warning">PUT</span>
+                    /api/landmarks/{landmarkID} <span class="info">actualizar ciudad (enviar JSON)</span> 
+                    </li>
+                    <li class="list-group-item"><span class="badge text-bg-danger">DELETE</span> /api/landmarks/{landmarkID} <span class="info">Eliminar una ciudad</span></li>
+                </ul>
+            </div>
+        </div>
     </main>
-    <footer>
-        
+    <footer class="d-flex justify-content-center flex-column align-items-center">
+        <p>Priscila Delli Carpini</p>
+        <p>Aplicaciones Híbridas | Jonathan Emanuel Cruz | DWN4AV</p>
     </footer>
 </body>
 </html>

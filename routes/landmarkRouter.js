@@ -1,4 +1,4 @@
-import express from 'express';
+/* import express from 'express';
 import Landmark from '../model/Landmark.js';
 const model = new Landmark();
 const router = express.Router();
@@ -86,3 +86,4 @@ router.put('/:id', async (req, res) => {
 });
 
 export default router;
+*/

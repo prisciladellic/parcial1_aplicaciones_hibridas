@@ -1,0 +1,38 @@
+body {
+    font-family: "SUSE Mono", sans-serif !important;
+}
+
+header {
+    background-color: #fdfbe4;
+    height: 150px;
+}
+
+.title {
+    color: #44b9df;
+    font-weight: bold;
+}
+
+main {
+    background-color: #f0d2a0;
+    height: 60vh;
+}
+
+.subtitle {
+    background-color: #fdfbe4 !important;
+    width: 550px;
+}
+
+.subtitle h2 {
+    color:#44b9df;
+    font-weight: bold;
+}
+
+.info {
+    font-size: smaller;
+    color: #525252;
+}
+
+footer {
+    background-color: #fdfbe4;
+    height: 100px;
+}

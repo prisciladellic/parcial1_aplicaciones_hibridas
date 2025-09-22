@@ -1,33 +1,31 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 import routerAPI from './routes/index.js';
 dotenv.config();
 
-const port = process.env.PORT;
+// variables entorno
+const PORT = process.env.PORT;
+const URI_DB = process.env.URI_DB;
+
+// conexión con la base de datos
+mongoose.connect(URI_DB);
+const db = mongoose.connection;
+db.on('error', () => {console.error('No fue posible establecer conexión con la base de datos 🔴')});
+db.on('open', () => {console.info('Conexión con la base de datos correctamente establecida 🟢')});
+
 const app = express();
 app.use(express.json());
 app.use('/', express.static('public'));
-routerAPI(app);
 
+// middleware
 app.use((req, res, next) => {
     console.log('Te estoy vigilando 👀');
     next();
 });
 
-app.get('/', (req, res) => {
-    res.send(`
-        <h1>Bienvenid@s a mi API de ciudades y lugares turísticos</h1>
-        <ul>
-        <li><a href="/api/cities">Ciudades</a></li>
-        </ul>
-        <ul>
-        <li><a href="/api/landmarks">Lugares Turísticos</a></li>
-        </ul>
-        `);
-});
+routerAPI(app);
 
-console.log('API');
-
-app.listen( port, () => {
-    console.log(`Servidor Web en el puerto ${port}`);
+app.listen( PORT, () => {
+    console.log(`Servidor Web en el puerto ${PORT}`);
 });
