@@ -18,7 +18,7 @@
 
     </header>
     <main>
-        <div class="d-flex justify-content-center m-0 p-5">
+        <div class="d-flex justify-content-center m-0 pt-5">
             <div class="card m-2">
                 <h2 class="mx-3 my-2 fs-4">Ciudades</h2>
                 <ul class="list-group list-group-flush">
@@ -93,6 +93,35 @@
                         <span class="info">Eliminar un lugar</span></li>
                 </ul>
             </div>
+        </div>
+        <div class="d-flex justify-content-center m-0 pb-5">
+            <div class="card m-2">
+                <h2 class="mx-3 my-2 fs-4">Usuarios</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info">GET</span> 
+                        <a href="/api/users">/api/users</a> 
+                        <span class="info">Obtener lista completa de usuarios</span></li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info">GET</span> 
+                        /api/users/{userID}
+                        <span class="info">Obtener usuario por ID</span></li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-success">POST</span>
+                        /api/users 
+                        <span class="info">Crear un usuario</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-warning">PUT</span>
+                        /api/users/{userID} 
+                        <span class="info">Actualizar un usuario</span> 
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-danger">DELETE</span> 
+                        /api/users/{userID} 
+                        <span class="info">Eliminar un usuario</span></li>
+                </ul>
+            </div> 
         </div>
     </main>
     <footer class="d-flex justify-content-center flex-column align-items-center">

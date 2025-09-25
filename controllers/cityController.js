@@ -1,27 +1,6 @@
 import CityModel from '../models/cityModel.js';
 
 class CityController {
-    static async auth ( req, res ) {
-        try {
-            const {city_name, country, continent, language, climate} = req.body;
-            if(!city_name || !country || !continent || !language || !climate) {
-                res.status(400).json({msg: "Faltan campos obligatorios por rellenar"});
-                return;
-            }
-
-            const cityData = await CityModel.findOne({city_name});
-            
-            if(!cityData){
-                res.status(404).json({ msg: 'La ciudad no existe en nuestra base de datos'});
-                return;
-            }
-
-        } catch (error) {
-            console.error(error);
-            res.status(500).json({msg: 'Ocurrió un error con el servidor, lamentamos las molestias ocasionadas'});
-        }
-    }
-
     // obtener ciudades - filtros por país y por continente - búsqueda por nombre
     static async getCities (req, res) {
         try {
